@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #1f1f1f;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff6f61;
+    }
+
+    .navbar .search-bar {
+      
+      
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar .search-bar input {
+
+      width: 400px;
+      padding: 5px 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .navbar .search-bar button {
+      padding: 5px 10px;
+      font-size: 16px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .navbar .search-bar button:hover {
+      background-color: #e65a50;
+    }
+
+    /* Movie suggestion container */
+    .movieS {
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      gap: 20px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .movie-card {
+      position: relative;
+      width: auto;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .movie-card .rating {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .movie-card:hover .rating {
+      opacity: 1;
+    }
+    img{
+      display: flex;
+      margin: 5px;
+      &:hover{
+        background-color: red;
+      }
+    }
+
+    .main{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 600px;
+      
+      background-color: pink;
+      margin:2px;
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">MovieApp</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search movies...">
+      <button>Search</button>
+    </div>
+  </div>
+
+  <!-- Movie Suggestions -->
+  <div class="movieS">
+    <!-- Movie Card 1 -->
+    <div class="movie-card">
+      <img src='https://1.bp.blogspot.com/-SQJwfwRwlts/YPlLK5dL05I/AAAAAAAAUhE/rfdb14wDIuIO0484aQN3LbxhMckppGqzACLcBGAsYHQ/s992/summer-time-render-anime-poster.jpg' alt="movie">
+      <div class="rating">Rating: 7.5/10</div>
+    </div>
+
+
+    <!-- Movie Card 2 -->
+    <div class="movie-card">
+      <img src='https://preview.redd.it/suzume-poster-from-cinema-v0-j80g2n6nnima1.jpg?width=3024&format=pjpg&auto=webp&s=990d89100376bc2597f198c8a8cdbe59c5e1b87b' alt="movie">
+      <div class="rating">Rating: 7.5/10</div>
+    </div>
+
+    <!-- Movie Card 3 -->
+    <div class="movie-card">
+      <img src='https://th.bing.com/th/id/OIP.VMYzJmJ7XtcNQcSBQnaLBgHaLH?rs=1&pid=ImgDetMain' alt="movie">
+      <div class="rating">Rating: 7.5/10</div>
+    </div>
+
+    <!-- Movie Card 4 -->
+    <div class="movie-card">
+      <img src='https://th.bing.com/th/id/OIP.2hcXAQ--LXeJ5sJfEdHHkQHaLH?rs=1&pid=ImgDetMain' alt="movie">
+      <div class="rating">Rating: 7.5/10</div>
+    </div>
+
+  </div>
+<script src="movie.js"></script>
+</body>
+</html>
